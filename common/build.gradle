@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res', 'src/main/res/layout', 'src/main/res/drawable-xxhdpi']
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api "com.android.support:multidex:${rootProject.ext.multidexVersion}"
+    api "com.android.support:appcompat-v7:${rootProject.ext.supportVersion}"
+    testImplementation "junit:junit:${rootProject.ext.junitVersion}"
+    androidTestImplementation "com.android.support.test:runner:${rootProject.ext.testRunnerVersion}"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:${rootProject.ext.espressoVersion}"
+    api project(':mvp')
+    api project(':retrofit')
+    api project(':library')
+    implementation project(':widget')
+}
