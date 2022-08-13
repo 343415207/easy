@@ -1,4 +1,6 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -17,18 +19,6 @@ android {
         }
     }
 }
-
-configurations.all {
-    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
-        def requested = details.requested
-        if (requested.group == 'com.android.support') {
-            if (!requested.name.startsWith("multidex")) {
-                details.useVersion "${rootProject.ext.supportVersion}"
-            }
-        }
-    }
-}
-
 dependencies {
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
