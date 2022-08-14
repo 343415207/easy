@@ -1,36 +1,12 @@
-plugins {
-    id 'com.android.application'
-}
-
+apply plugin: 'com.android.application'
+apply from: "../config.gradle"
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "com.moon.mvp.demo"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
     }
 }
 dependencies {
-
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "com.android.support:appcompat-v7:${rootProject.ext.supportVersion}"
-    implementation "com.android.support.constraint:constraint-layout:${rootProject.ext.constraintLayoutVersion}"
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-    implementation 'com.android.support:support-v4:27.1.1'
-    testImplementation "junit:junit:${rootProject.ext.junitVersion}"
-    androidTestImplementation "com.android.support.test:runner:${rootProject.ext.testRunnerVersion}"
-    androidTestImplementation("com.android.support.test.espresso:espresso-core:${rootProject.ext.espressoVersion}", {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    androidTestImplementation "com.android.support.test.espresso:espresso-idling-resource:${rootProject.ext.espressoVersion}"
     api project(':common')
 }

@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "easy"
-include ':app', ':mvp', ':common', ':retrofit', ':library',':widget'
+include ':app', ':mvp', ':common', ':retrofit', ':library',':widget',':api'
