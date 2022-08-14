@@ -1,8 +1,8 @@
 package com.moon.common.base.app;
 
-import android.support.multidex.MultiDexApplication;
+import android.app.Application;
 
-public abstract class BaseApplication extends MultiDexApplication {
+public abstract class BaseApplication extends Application {
 
     @Override
     public void onCreate() {
