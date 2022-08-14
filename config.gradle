@@ -3,7 +3,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -14,11 +15,24 @@ android {
 }
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "androidx.appcompat:appcompat:${rootProject.ext.androidxAppcompatVersion}"
-    implementation "androidx.annotation:annotation:${rootProject.ext.androidxAnnotationVersion}"
-    implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.androidxConstraintlayoutVersion}"
+    implementation "com.android.support.constraint:constraint-layout:${rootProject.ext.androidSupportConstraintLayoutVersion}"
+    implementation "com.android.support:support-v4:${rootProject.ext.androidSupportV7Version}"
+    implementation "com.android.support:appcompat-v7:${rootProject.ext.androidSupportV7Version}"
 
     testImplementation "junit:junit:${rootProject.ext.junitVersion}"
-    androidTestImplementation "androidx.test.ext:junit:${rootProject.ext.androidxJunitVersion}"
-    androidTestImplementation "androidx.test.espresso:espresso-core:${rootProject.ext.espressoVersion}"
+    androidTestImplementation "com.android.support.test:runner:${rootProject.ext.testRunnerVersion}"
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:${rootProject.ext.espressoVersion}", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestImplementation "com.android.support.test.espresso:espresso-idling-resource:${rootProject.ext.espressoVersion}"
+
+//    implementation "androidx.appcompat:appcompat:${rootProject.ext.androidxAppcompatVersion}"
+//    implementation "androidx.annotation:annotation:${rootProject.ext.androidxAnnotationVersion}"
+//    implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.androidxConstraintlayoutVersion}"
+
+
+
+//    testImplementation "junit:junit:${rootProject.ext.junitVersion}"
+//    androidTestImplementation "androidx.test.ext:junit:${rootProject.ext.androidxJunitVersion}"
+//    androidTestImplementation "androidx.test.espresso:espresso-core:${rootProject.ext.espressoVersion}"
 }
