@@ -2,13 +2,15 @@ package com.moon.mvp;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.annotation.MenuRes;
 import androidx.annotation.Nullable;
+
 import android.view.Menu;
 import android.view.View;
 
-import com.trello.rxlifecycle2.LifecycleTransformer;
-import com.trello.rxlifecycle2.components.support.RxFragmentActivity;
+import com.trello.rxlifecycle4.LifecycleTransformer;
+import com.trello.rxlifecycle4.components.support.RxFragmentActivity;
 
 public abstract class MVPActivity<P extends IPresenter> extends RxFragmentActivity implements IView, Init<P> {
 

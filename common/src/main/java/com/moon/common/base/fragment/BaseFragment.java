@@ -32,7 +32,6 @@ public abstract class BaseFragment<P extends BasePresenter> extends MVPFragment<
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
         mLazySupportView.setUserVisibleHint(isVisibleToUser);
     }
 
