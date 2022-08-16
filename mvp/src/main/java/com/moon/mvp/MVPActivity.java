@@ -2,8 +2,8 @@ package com.moon.mvp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.MenuRes;
-import android.support.annotation.Nullable;
+import androidx.annotation.MenuRes;
+import androidx.annotation.Nullable;
 import android.view.Menu;
 import android.view.View;
 

@@ -1,6 +1,6 @@
 package com.moon.common.base.net.rx;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.moon.common.base.net.rx.schedulers.BaseSchedulerProvider;
 import com.moon.mvp.IView;

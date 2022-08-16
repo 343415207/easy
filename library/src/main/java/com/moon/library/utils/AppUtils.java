@@ -2,8 +2,8 @@ package com.moon.library.utils;
 
 import android.app.Application;
 import android.content.res.Resources;
-import android.support.annotation.ColorRes;
-import android.support.annotation.StringRes;
+import androidx.annotation.ColorRes;
+import androidx.annotation.StringRes;
 
 public class AppUtils {
 

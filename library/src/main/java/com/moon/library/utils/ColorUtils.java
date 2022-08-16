@@ -1,9 +1,9 @@
 package com.moon.library.utils;
 
 import android.content.Context;
-import android.support.annotation.ColorRes;
-import android.support.annotation.NonNull;
-import android.support.v4.content.res.ResourcesCompat;
+import androidx.annotation.ColorRes;
+import androidx.annotation.NonNull;
+import androidx.core.content.res.ResourcesCompat;
 
 /**
  * {@link android.graphics.Color}工具类

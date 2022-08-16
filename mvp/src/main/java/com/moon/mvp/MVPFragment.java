@@ -3,17 +3,19 @@ package com.moon.mvp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.MenuRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.trello.rxlifecycle2.LifecycleTransformer;
-import com.trello.rxlifecycle2.components.support.RxFragment;
+import androidx.annotation.MenuRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.trello.rxlifecycle4.LifecycleTransformer;
+import com.trello.rxlifecycle4.components.RxFragment;
+
 
 public abstract class MVPFragment<P extends IPresenter> extends RxFragment implements IView, Init<P> {
 

@@ -2,7 +2,7 @@ package com.moon.library.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 
 public class SessionHelper {
 

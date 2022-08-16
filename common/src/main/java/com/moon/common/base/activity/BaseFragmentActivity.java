@@ -1,7 +1,7 @@
 package com.moon.common.base.activity;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 
 import com.moon.common.R;
 import com.moon.common.base.mvp.BasePresenter;

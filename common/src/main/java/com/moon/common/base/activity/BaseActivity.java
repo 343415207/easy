@@ -1,7 +1,7 @@
 package com.moon.common.base.activity;
 
 import android.os.Bundle;
-import android.support.annotation.IdRes;
+import androidx.annotation.IdRes;
 import android.view.View;
 import android.view.WindowManager;
 

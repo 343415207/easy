@@ -1,8 +1,8 @@
 package com.moon.library.utils;
 
 import android.content.Context;
-import android.support.annotation.ColorRes;
-import android.support.annotation.Nullable;
+import androidx.annotation.ColorRes;
+import androidx.annotation.Nullable;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;

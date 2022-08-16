@@ -1,7 +1,7 @@
 package com.moon.mvp.demo.main.request;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.moon.common.base.net.request.BaseApiRequestBuilder;
 import com.moon.common.base.net.response.BaseResponse;

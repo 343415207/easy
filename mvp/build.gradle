@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply from: "../config.gradle"
+apply from: '../config.gradle'
 android {
     defaultConfig {
         versionCode 1
@@ -15,8 +15,12 @@ android {
 dependencies {
     // Android使用的库，里面使用了Android的生命周期方法
     // 内部引用了基础库，如果使用此库则无需再引用基础库
-    api 'com.trello.rxlifecycle2:rxlifecycle-android:2.1.0'
-    // Android组件库，里面定义了例如RxAppCompatActivity、RxFragment之类的Android组件
-    // 内部引用了基础库和Android库，如果使用此库则无需再重复引用
-    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    implementation 'com.trello.rxlifecycle4:rxlifecycle:4.0.2'
+    // If you want to bind to Android-specific lifecycles
+    implementation 'com.trello.rxlifecycle4:rxlifecycle-android:4.0.2'
+    // If you want pre-written Activities and Fragments you can subclass as providers
+    implementation 'com.trello.rxlifecycle4:rxlifecycle-components:4.0.2'
+    // If you want pre-written support preference Fragments you can subclass as providers
+    implementation 'com.trello.rxlifecycle4:rxlifecycle-components-preference:4.0.2'
+
 }

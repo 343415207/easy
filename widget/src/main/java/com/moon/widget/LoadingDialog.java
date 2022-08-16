@@ -2,9 +2,9 @@ package com.moon.widget;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.StyleRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StyleRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

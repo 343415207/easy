@@ -1,10 +1,10 @@
 package com.moon.library.utils.statusbar;
 
 import android.content.Context;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.annotation.NonNull;
-import android.support.v4.content.res.ResourcesCompat;
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.annotation.NonNull;
+import androidx.core.content.res.ResourcesCompat;
 
 /**
  * 颜色工具类

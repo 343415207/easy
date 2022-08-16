@@ -1,7 +1,7 @@
 package com.moon.common.base.net.request;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.moon.retrofit.RetrofitHelper;
 import com.moon.common.base.net.request.interceptor.CommonHeaderInterceptor;

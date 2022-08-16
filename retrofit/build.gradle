@@ -9,9 +9,25 @@ android {
 dependencies {
     /*rx-android-java*/
     api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    api 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
-    api 'com.trello.rxlifecycle2:rxlifecycle:2.1.0'
-    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-core:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-appcompat:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-drawerlayout:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-leanback:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-recyclerview:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-slidingpanelayout:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-swiperefreshlayout:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-viewpager:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-viewpager2:4.0.0'
+    // Android使用的库，里面使用了Android的生命周期方法
+    // 内部引用了基础库，如果使用此库则无需再引用基础库
+    implementation 'com.trello.rxlifecycle4:rxlifecycle:4.0.2'
+    // If you want to bind to Android-specific lifecycles
+    implementation 'com.trello.rxlifecycle4:rxlifecycle-android:4.0.2'
+    // If you want pre-written Activities and Fragments you can subclass as providers
+    implementation 'com.trello.rxlifecycle4:rxlifecycle-components:4.0.2'
+    // If you want pre-written support preference Fragments you can subclass as providers
+    implementation 'com.trello.rxlifecycle4:rxlifecycle-components-preference:4.0.2'
     api 'com.squareup.retrofit2:retrofit:2.3.0'
     api 'com.squareup.retrofit2:converter-gson:2.3.0'
 
